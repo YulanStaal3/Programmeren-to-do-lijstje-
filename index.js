@@ -23,13 +23,13 @@ function addTask() {
 }
 
 // afvinken/verwijderen
-listContainer.addEventListener("click", function (e) {
-    if (e.target.tagName === "LI") {
-        e.target.classList.toggle("checked");
+listContainer.addEventListener("click", function (clickEvent) {
+    if (clickEvent.target.tagName === "LI") {
+        clickEvent.target.classList.toggle("checked");
         completeSound.play();
     }
-    else if (e.target.tagName === "SPAN") {
-        e.target.parentElement.remove();
+    else if (clickEvent.target.tagName === "SPAN") {
+        clickEvent.target.parentElement.remove();
     }
 });
 
